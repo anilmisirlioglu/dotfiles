@@ -1,0 +1,42 @@
+[user]
+	name = anilmisirlioglu
+	email = misirlioglisamet@gmail.com
+	signingkey = A63D389DF4448458BEEDD0515AE39B37FD19DC7B
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = always
+
+[hub]
+	protocol = ssl
+
+[core]
+	autocrlf = false
+	eol = lf
+	pager = delta
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg
+
+[interactive]
+	diffFilter = delta --color-only --width 100
+
+[diff]
+	colorMoved = default
+
+[delta]
+	features = line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	syntax-theme = Dracula
+	plus-style = syntax "#003800"
+	minus-style = syntax "#3f0001"

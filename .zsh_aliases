@@ -1,0 +1,51 @@
+# This scripts is sourced from .zshrc.
+
+# Timestamp
+alias timestamp='date +%s'
+
+# Edit & Apply zshrc
+alias edit='vi +star ~/.zshrc +11'
+alias apply='source ~/.zshrc'
+
+# copy & paste for WSL
+alias paste='powershell.exe -command "Get-Clipboard"'
+alias copy='clip.exe'
+
+# file explorer
+alias open='explorer.exe'
+
+# convenience aliases
+alias ag='ag --hidden'
+alias sls='exa -abghHliS'
+alias tls='exa --long --tree'
+alias ping='ping -c 3'
+
+# project dir shortcuts
+alias ijp='cd /mnt/c/IntellijProjects'
+alias wsp='cd /mnt/c/Users/misir/WebstormProjects'
+alias glp='cd /mnt/c/Users/misir/GoLandProjects'
+alias junk='cd /mnt/c/Users/misir/junk'
+
+# JetBrains IDEs shortcuts
+alias goland='cmd.exe /c $IDES/goland.cmd'
+alias phps='cmd.exe /c $IDES/PhpStorm.cmd'
+alias ij='cmd.exe /c $IDES/idea.cmd'
+alias ws='cmd.exe /c $IDES/webstorm.cmd'
+
+# cloud stuff
+alias d='docker'
+alias dr='docker run --rm -i -t'
+alias drb='docker run --rm -i -t --entrypoint sh'
+alias drr='docker run --rm -i -t -p 8080:8080 -e PORT=8080'
+alias dx='docker exec -i -t'
+alias db='docker build -t'
+
+# google cloud platform
+alias gcurl='curl -k --header "Authorization: Bearer $(gcloud auth print-access-token -q)"'
+alias runcurl='curl -k --header "Authorization: Bearer $(gcloud auth print-identity-token -q)"'
+alias gke='gcloud container clusters'
+alias gkedel='gcloud container clusters delete -q --async'
+alias gce='gcloud compute instances'
+alias gcssh='gcloud compute ssh'
+alias runlist='gcloud run services list --platform=managed'
+alias rundel='gcloud run services delete -q --platform=managed --region us-central1'
