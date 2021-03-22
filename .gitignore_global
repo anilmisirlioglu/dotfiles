@@ -1,0 +1,46 @@
+# Editors
+.idea
+.vscode
+*.swp
+*~
+*.profraw
+
+# Compiled source
+*.class
+*.dll
+*.exe
+*.o
+*.so
+dist/
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+logs
+*.log
+*.sql
+*.sqlite
+
+# NPM
+node_modules/
+
+# env
+.env
+.env.test
+
+# OS generated files for MacOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

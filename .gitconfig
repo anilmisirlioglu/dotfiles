@@ -16,6 +16,7 @@
 	autocrlf = false
 	eol = lf
 	pager = delta
+	excludesFile = ~/.gitignore_global
 
 [commit]
 	gpgsign = true
@@ -28,6 +29,9 @@
 
 [diff]
 	colorMoved = default
+
+[init]
+	defaultBranch = main
 
 [delta]
 	features = line-numbers decorations
