@@ -24,6 +24,9 @@
 [gpg]
 	program = gpg
 
+[log]
+	date = iso-local
+
 [interactive]
 	diffFilter = delta --color-only --width 100
 

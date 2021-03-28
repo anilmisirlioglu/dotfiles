@@ -19,6 +19,7 @@ alias ag='ag --hidden'
 alias sls='exa -abghHliS'
 alias tls='exa --long --tree'
 alias ping='ping -c 3'
+alias decodecert='openssl x509 -in /dev/stdin -text'
 
 # project dir shortcuts
 alias ijp='cd /mnt/c/IntellijProjects'
