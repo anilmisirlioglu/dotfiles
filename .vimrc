@@ -8,6 +8,7 @@ Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdtree'
 Plug 't9md/vim-choosewin'
+Plug 'bling/vim-airline'
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
 call plug#end()
@@ -26,6 +27,8 @@ set softtabstop =4
 set shiftwidth  =4
 set expandtab
 
+set encoding=UTF-8
+
 set ttyfast
 set mouse=a
 
@@ -34,6 +37,9 @@ set listchars=tab:\|_
 
 set backspace=2 " make backspace work like most other apps
 set backspace=indent,eol,start
+
+set splitright
+set splitbelow
 
 set colorcolumn=80
 highlight ExtraWhitespace ctermbg=0 guibg=lightgrey
@@ -52,7 +58,9 @@ let g:gruvbox_contrast_dark = "hard"
 autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" ==================== markdown ====================
+map <C-n> :NERDTreeToggle<CR>
+
+" ==================== Markdown ====================
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_fenced_languages = ['go=go', 'viml=vim', 'bash=sh']
 let g:vim_markdown_conceal = 0
