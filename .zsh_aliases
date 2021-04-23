@@ -18,6 +18,7 @@ alias open='explorer.exe'
 alias ag='ag --hidden'
 alias sls='exa -abghHliS'
 alias tls='exa --long --tree'
+alias cdr='cd $(git rev-parse --show-toplevel)'
 alias ping='ping -c 3'
 alias decodecert='openssl x509 -in /dev/stdin -text'
 

@@ -9,7 +9,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdtree'
 Plug 't9md/vim-choosewin'
 Plug 'bling/vim-airline'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
 call plug#end()
 
@@ -59,6 +58,8 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 map <C-n> :NERDTreeToggle<CR>
+
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " ==================== Markdown ====================
 let g:vim_markdown_folding_disabled = 1
