@@ -1,6 +1,6 @@
 [user]
 	name = Anıl Mısırlıoğlu
-    email = anil.misirlioglu@trendyol.com
+	email = anil.misirlioglu@trendyol.com
 	signingkey = 24CF679460E92CA0B65D2BB4FC5B2E74FAB0B9D5
 
 [color]
@@ -40,7 +40,7 @@
 	file-decoration-style = none
 	syntax-theme = Dracula
 	plus-style = syntax "#003800"
-    minus-style = syntax "#3f0001"
+	minus-style = syntax "#3f0001"
 
 [commit]
 	gpgsign = false
