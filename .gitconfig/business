@@ -1,0 +1,54 @@
+[user]
+	name = Anıl Mısırlıoğlu
+    email = anil.misirlioglu@trendyol.com
+	signingkey = 24CF679460E92CA0B65D2BB4FC5B2E74FAB0B9D5
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = always
+
+[hub]
+	protocol = ssl
+
+[core]
+	autocrlf = false
+	eol = lf
+	pager = delta
+	excludesFile = ~/.gitignore_global
+
+[log]
+	date = iso-local
+
+[interactive]
+	diffFilter = delta --color-only --width 100
+
+[diff]
+	colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[delta]
+	features = line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	syntax-theme = Dracula
+	plus-style = syntax "#003800"
+    minus-style = syntax "#3f0001"
+
+[commit]
+	gpgsign = false
+
+[gpg]
+	program = /usr/local/bin/gpg
+
+[alias]
+	unstage = reset HEAD --hard
+	last = log -1 HEAD
+	zb = "!f() { git checkout -b feature/ZEUS-\"$1\"; }; f"

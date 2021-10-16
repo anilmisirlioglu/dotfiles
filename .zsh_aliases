@@ -1,38 +1,28 @@
-# This scripts is sourced from .zshrc.
-
-# Timestamp
-alias timestamp='date +%s'
+# This scripts is sourced from .zshrc
 
 # Edit & Apply zshrc
 alias edit='vi +star ~/.zshrc +11'
 alias apply='source ~/.zshrc'
 
-# copy & paste for WSL
-alias paste='powershell.exe -command "Get-Clipboard"'
-alias copy='clip.exe'
-
-# file explorer
-alias open='explorer.exe'
-
 # convenience aliases
 alias ag='ag --hidden'
-alias sls='exa -abghHliS'
-alias tls='exa --long --tree'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias ping='ping -c 3'
 alias decodecert='openssl x509 -in /dev/stdin -text'
 
 # project dir shortcuts
-alias ijp='cd /mnt/c/IntellijProjects'
-alias wsp='cd /mnt/c/Users/misir/WebstormProjects'
-alias glp='cd /mnt/c/Users/misir/GoLandProjects'
-alias junk='cd /mnt/c/Users/misir/junk'
+alias zeus='cd $HOME/Workspace'
+alias junk='cd $HOME/Personal/junk'
+alias prod='cd $HOME/Personal/prod'
+alias h=$HOME
 
-# JetBrains IDEs shortcuts
-alias goland='cmd.exe /c $IDES/goland.cmd'
-alias phps='cmd.exe /c $IDES/PhpStorm.cmd'
-alias ij='cmd.exe /c $IDES/idea.cmd'
-alias ws='cmd.exe /c $IDES/webstorm.cmd'
+# JetBrains IDEAs shortcuts
+alias goland='$IDES/goland'
+alias ij='$IDES/idea'
+alias ws='$IDES/webstorm'
+
+alias git='LANG=en_US git'
+alias gpoh='git push origin HEAD'
 
 # cloud stuff
 alias d='docker'
@@ -41,6 +31,8 @@ alias drb='docker run --rm -i -t --entrypoint sh'
 alias drr='docker run --rm -i -t -p 8080:8080 -e PORT=8080'
 alias dx='docker exec -i -t'
 alias db='docker build -t'
+alias k='kubectl'
+alias kx='kubectx'
 
 # google cloud platform
 alias gcurl='curl -k --header "Authorization: Bearer $(gcloud auth print-access-token -q)"'

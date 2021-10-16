@@ -1,7 +1,7 @@
 [user]
-	name = anilmisirlioglu
-	email = misirlioglisamet@gmail.com
-	signingkey = A63D389DF4448458BEEDD0515AE39B37FD19DC7B
+	name = Anıl Mısırlıoğlu
+    email = misirlioglisamet@gmail.com
+	signingkey = 24CF679460E92CA0B65D2BB4FC5B2E74FAB0B9D5
 
 [color]
 	branch = auto
@@ -17,12 +17,6 @@
 	eol = lf
 	pager = delta
 	excludesFile = ~/.gitignore_global
-
-[commit]
-	gpgsign = true
-
-[gpg]
-	program = gpg
 
 [log]
 	date = iso-local
@@ -48,5 +42,12 @@
 	plus-style = syntax "#003800"
     minus-style = syntax "#3f0001"
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+[commit]
+	gpgsign = false
+
+[gpg]
+	program = /usr/local/bin/gpg
+
+[alias]
+	unstage = reset HEAD --hard
+	last = log -1 HEAD
