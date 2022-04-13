@@ -4,7 +4,7 @@ Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'fatih/vim-go'
+"Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdtree'
 Plug 't9md/vim-choosewin'

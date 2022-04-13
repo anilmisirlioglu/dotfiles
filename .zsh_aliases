@@ -3,26 +3,26 @@
 # Edit & Apply zshrc
 alias edit='vi +star ~/.zshrc +11'
 alias apply='source ~/.zshrc'
-
+ca
 # convenience aliases
 alias ag='ag --hidden'
+alias agi="ag --ignore '*.yaml' --ignore '*.json' --ignore '*.java' --ignore '.git'"
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias ping='ping -c 3'
 alias decodecert='openssl x509 -in /dev/stdin -text'
+alias lls='exa --git --group-directories-first --classify --icons --color-scale --color always -laFm'
+alias pt='pbpaste | tee'
+alias goci='golangci-lint run  -c .golangci.yml'
+# alias cat='bat --style "grid,header" '
+alias fs='ranger'
+alias hava='curl tr.wttr.in/Kocaeli'
+alias hmap='curl v3.wttr.in/Kocaeli.sxl'
 
 # project dir shortcuts
-alias zeus='cd $HOME/Workspace'
+#alias zeus='cd $HOME/Workspace'
 alias junk='cd $HOME/Personal/junk'
 alias prod='cd $HOME/Personal/prod'
 alias h=$HOME
-
-# JetBrains IDEAs shortcuts
-alias goland='$IDES/goland'
-alias ij='$IDES/idea'
-alias ws='$IDES/webstorm'
-
-alias git='LANG=en_US git'
-alias gpoh='git push origin HEAD'
 
 # cloud stuff
 alias d='docker'
@@ -33,13 +33,16 @@ alias dx='docker exec -i -t'
 alias db='docker build -t'
 alias k='kubectl'
 alias kx='kubectx'
+alias netshoot='kubectl run tmp-shell-anil --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
 
-# google cloud platform
-alias gcurl='curl -k --header "Authorization: Bearer $(gcloud auth print-access-token -q)"'
-alias runcurl='curl -k --header "Authorization: Bearer $(gcloud auth print-identity-token -q)"'
-alias gke='gcloud container clusters'
-alias gkedel='gcloud container clusters delete -q --async'
-alias gce='gcloud compute instances'
-alias gcssh='gcloud compute ssh'
-alias runlist='gcloud run services list --platform=managed'
-alias rundel='gcloud run services delete -q --platform=managed --region us-central1'
+# JetBrains IDEAs shortcuts
+alias goland='$IDES/goland'
+alias ij='$IDES/idea'
+alias ws='$IDES/webstorm'
+
+alias git='LANG=en_US git'
+alias gpz='git push origin HEAD -o merge_request.create -o merge_request.target=develop -o merge_request.merge_when_pipeline_succeeds'
+alias gpoh='git push origin HEAD'
+alias gpr='git commit -a; git pr master; git pr develop'
+alias gfc='git log --reverse | head'
+alias hb='gh repo view --web'

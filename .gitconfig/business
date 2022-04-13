@@ -52,3 +52,4 @@
 	unstage = reset HEAD --hard
 	last = log -1 HEAD
 	zb = "!f() { git checkout -b feature/ZEUS-\"$1\"; }; f"
+	pr = "!f() { push origin HEAD -o merge_request.create -o merge_request.target=\"$1\"; }; f"
