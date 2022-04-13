@@ -3,7 +3,7 @@
 # Edit & Apply zshrc
 alias edit='vi +star ~/.zshrc +11'
 alias apply='source ~/.zshrc'
-ca
+
 # convenience aliases
 alias ag='ag --hidden'
 alias agi="ag --ignore '*.yaml' --ignore '*.json' --ignore '*.java' --ignore '.git'"
